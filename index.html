@@ -1,778 +1,806 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CODIX STYLE LINE — Web Development Studio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODIX STYLE LINE — Web Development Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Scanline overlay -->
-<div class="scanlines"></div>
-<div class="noise"></div>
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+  <div class="noise"></div>
 
-<!-- Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-trail" id="cursorTrail"></div>
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-logo">
-    <span class="logo-bracket">[</span>
-    <span class="logo-text">CODIX</span>
-    <span class="logo-accent">_</span>
-    <span class="logo-sub">STYLE LINE</span>
-    <span class="logo-bracket">]</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#services" data-text="УСЛУГИ">УСЛУГИ</a></li>
-    <li><a href="#pricing" data-text="ЦЕНЫ">ЦЕНЫ</a></li>
-    <li><a href="#portfolio" data-text="ПОРТФОЛИО">ПОРТФОЛИО</a></li>
-    <li><a href="#contact" data-text="КОНТАКТ">КОНТАКТ</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">НАЧАТЬ ПРОЕКТ</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
-    <span class="bar bar-1"></span>
-    <span class="bar bar-2"></span>
-    <span class="bar bar-3"></span>
-  </button>
-</nav>
-
-<!-- MOBILE MENU DRAWER -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
-  <div class="mobile-menu-drawer">
-    <div class="mobile-menu-header">
-      <div class="nav-logo">
-        <span class="logo-bracket">[</span>
-        <span class="logo-text">CODIX</span>
-        <span class="logo-accent">_</span>
-        <span class="logo-sub">LINE</span>
-        <span class="logo-bracket">]</span>
-      </div>
-      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть меню">✕</button>
-    </div>
-    
-    <div class="mobile-menu-body">
-      <ul class="mobile-nav-links">
-        <li><a href="#services" class="mobile-nav-item"><span class="nav-num">01</span> УСЛУГИ</a></li>
-        <li><a href="#pricing" class="mobile-nav-item"><span class="nav-num">02</span> ЦЕНЫ</a></li>
-        <li><a href="#portfolio" class="mobile-nav-item"><span class="nav-num">03</span> ПОРТФОЛИО</a></li>
-        <li><a href="#process" class="mobile-nav-item"><span class="nav-num">04</span> ПРОЦЕСС</a></li>
-        <li><a href="#contact" class="mobile-nav-item"><span class="nav-num">05</span> КОНТАКТЫ</a></li>
-      </ul>
-      
-      <div class="mobile-menu-footer">
-        <a href="#contact" class="btn-primary mobile-cta-btn">
-          <span class="btn-glow"></span>
-          <span>ОБСУДИТЬ ПРОЕКТ</span>
-          <span class="btn-arrow">→</span>
-        </a>
-        
-        <div class="mobile-social-grid">
-          <a href="https://t.me/claower" target="_blank" class="mob-social-btn tg">
-            <span>Telegram</span>
-          </a>
-          <a href="https://wa.me/77000937002" target="_blank" class="mob-social-btn wa">
-            <span>WhatsApp</span>
-          </a>
-          <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="mob-social-btn ig">
-            <span>Instagram</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg">
-    <div class="grid-lines"></div>
-    <div class="city-glow"></div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-tag">
-      <span class="tag-dot"></span>
-      <span>WEB DEVELOPMENT STUDIO</span>
-    </div>
-
-    <h1 class="hero-title">
-      <span class="title-line">
-        <span class="glitch" data-text="СОЗДАЁМ">СОЗДАЁМ</span>
-      </span>
-      <span class="title-line">
-        <span class="neon-word">САЙТЫ</span>
-        <span class="title-accent"> ИЗ</span>
-      </span>
-      <span class="title-line">
-        <span class="outline-text">БУДУЩЕГО</span>
-      </span>
-    </h1>
-
-    <p class="hero-desc">
-      Разрабатываем сайты, которые не просто работают — они <span class="accent">захватывают</span>. 
-      Современный дизайн, чистый код, результат который продаёт.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">
-        <span class="btn-glow"></span>
-        <span>ОБСУДИТЬ ПРОЕКТ</span>
-        <span class="btn-arrow">→</span>
-      </a>
-      <a href="#portfolio" class="btn-ghost">
-        <span>СМОТРЕТЬ РАБОТЫ</span>
-      </a>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
-        <span class="stat-label">Проектов</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span>
-        <span class="stat-label">Довольных клиентов</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="3">0</span><span class="stat-plus">г</span>
-        <span class="stat-label">Опыта</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="code-window">
-      <div class="window-bar">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="window-title">codix_main.js</span>
-      </div>
-      <div class="code-content" id="codeContent">
-        <div class="code-line"><span class="kw">const</span> <span class="var">site</span> = <span class="fn">createMasterpiece</span>({</div>
-        <div class="code-line indent"><span class="prop">design</span>: <span class="str">"cyberpunk"</span>,</div>
-        <div class="code-line indent"><span class="prop">performance</span>: <span class="num">100</span>,</div>
-        <div class="code-line indent"><span class="prop">style</span>: <span class="str">"нeon_tokyo"</span>,</div>
-        <div class="code-line indent"><span class="prop">impact</span>: <span class="str">"максимальный"</span>,</div>
-        <div class="code-line">});</div>
-        <div class="code-line empty"></div>
-        <div class="code-line"><span class="kw">await</span> site.<span class="fn">launch</span>();</div>
-        <div class="code-line comment">// ✓ Ваш бизнес взлетел 🚀</div>
-      </div>
-    </div>
-
-    <div class="floating-tags">
-      <div class="ftag ftag-1">React.js</div>
-      <div class="ftag ftag-2">Next.js</div>
-      <div class="ftag ftag-3">UI/UX</div>
-      <div class="ftag ftag-4">SEO</div>
-      <div class="ftag ftag-5">TypeScript</div>
-    </div>
-  </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>SCROLL</span>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-header">
-    <div class="section-tag"><span class="tag-num">01</span> УСЛУГИ</div>
-    <h2 class="section-title">ЧТО МЫ <span class="neon-accent">ДЕЛАЕМ</span></h2>
-  </div>
-
-  <div class="services-grid">
-    <div class="service-card" data-delay="0">
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <rect x="5" y="10" width="50" height="35" rx="3" stroke="currentColor" stroke-width="2"/>
-          <line x1="5" y1="20" x2="55" y2="20" stroke="currentColor" stroke-width="2"/>
-          <circle cx="12" cy="15" r="2" fill="currentColor"/>
-          <circle cx="20" cy="15" r="2" fill="currentColor"/>
-          <line x1="15" y1="30" x2="45" y2="30" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
-          <line x1="15" y1="37" x2="35" y2="37" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
-          <rect x="20" y="45" width="20" height="5" fill="currentColor" opacity="0.5"/>
-        </svg>
-      </div>
-      <h3>Лендинг страницы</h3>
-      <p>Конверсионные одностраничники, которые превращают посетителей в клиентов. Продающий дизайн + мощный копирайтинг.</p>
-      <div class="card-tech">
-        <span>HTML/CSS</span><span>JS</span><span>Анимации</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-
-    <div class="service-card featured" data-delay="100">
-      <div class="card-badge">ПОПУЛЯРНОЕ</div>
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <rect x="5" y="5" width="22" height="50" rx="2" stroke="currentColor" stroke-width="2"/>
-          <rect x="33" y="5" width="22" height="23" rx="2" stroke="currentColor" stroke-width="2"/>
-          <rect x="33" y="32" width="22" height="23" rx="2" stroke="currentColor" stroke-width="2"/>
-          <line x1="10" y1="15" x2="22" y2="15" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="10" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="10" y1="27" x2="18" y2="27" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="44" cy="43" r="6" stroke="currentColor" stroke-width="2"/>
-          <line x1="48" y1="47" x2="52" y2="51" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </div>
-      <h3>Корпоративные сайты</h3>
-      <p>Многостраничные сайты для бизнеса. Полноценное представление компании с каталогом, блогом и CRM интеграцией.</p>
-      <div class="card-tech">
-        <span>React</span><span>Next.js</span><span>CMS</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-
-    <div class="service-card" data-delay="200">
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <rect x="15" y="5" width="30" height="50" rx="4" stroke="currentColor" stroke-width="2"/>
-          <line x1="15" y1="45" x2="45" y2="45" stroke="currentColor" stroke-width="2"/>
-          <circle cx="30" cy="50" r="2" fill="currentColor"/>
-          <rect x="20" y="12" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="20" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="20" y1="36" x2="33" y2="36" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <h3>Мобильные версии</h3>
-      <p>Адаптивная верстка и прогрессивные веб-приложения. Ваш сайт будет отлично выглядеть на любом экране.</p>
-      <div class="card-tech">
-        <span>PWA</span><span>Responsive</span><span>Mobile-first</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-
-    <div class="service-card" data-delay="300">
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2"/>
-          <path d="M30 10 C20 20 20 40 30 50 C40 40 40 20 30 10Z" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="10" y1="30" x2="50" y2="30" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="30" cy="30" r="3" fill="currentColor"/>
-        </svg>
-      </div>
-      <h3>Интернет-магазины</h3>
-      <p>E-commerce платформы с корзиной, оплатой и личным кабинетом. Продавайте онлайн уже сегодня.</p>
-      <div class="card-tech">
-        <span>E-commerce</span><span>Kaspi</span><span>API</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-
-    <div class="service-card" data-delay="400">
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <path d="M10 20 L30 10 L50 20 L50 45 L30 55 L10 45 Z" stroke="currentColor" stroke-width="2"/>
-          <path d="M10 20 L30 30 L50 20" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="30" y1="30" x2="30" y2="55" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <h3>UI/UX Дизайн</h3>
-      <p>Прототипы и дизайн-системы в Figma. Создаём интерфейсы, которые интуитивно понятны и визуально впечатляют.</p>
-      <div class="card-tech">
-        <span>Figma</span><span>Prototype</span><span>Design System</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-
-    <div class="service-card" data-delay="500">
-      <div class="card-icon">
-        <svg viewBox="0 0 60 60" fill="none">
-          <path d="M15 15 L45 15 L45 35 L35 35 L30 45 L25 35 L15 35 Z" stroke="currentColor" stroke-width="2"/>
-          <line x1="22" y1="23" x2="38" y2="23" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="22" y1="29" x2="34" y2="29" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <h3>SEO & Поддержка</h3>
-      <p>Поисковая оптимизация и техническая поддержка сайта. Чтобы ваш сайт находили и он всегда работал.</p>
-      <div class="card-tech">
-        <span>SEO</span><span>Аналитика</span><span>Поддержка</span>
-      </div>
-      <div class="card-glow"></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-header">
-    <div class="section-tag"><span class="tag-num">02</span> ЦЕНЫ</div>
-    <h2 class="section-title">ТАРИФЫ <span class="neon-accent">И ПАКЕТЫ</span></h2>
-    <p class="section-desc">Прозрачное ценообразование. Никаких скрытых платежей.</p>
-  </div>
-
-  <div class="pricing-grid">
-    <div class="price-card">
-      <div class="price-top">
-        <div class="price-name">СТАРТ</div>
-        <div class="price-icon">⚡</div>
-      </div>
-      <div class="price-amount">
-        <span class="price-from">от</span>
-        <span class="price-num">150 000</span>
-        <span class="price-currency">₸</span>
-      </div>
-      <div class="price-desc">Для малого бизнеса и стартапов</div>
-      <ul class="price-features">
-        <li><span class="check">✓</span> Лендинг страница (1-5 блоков)</li>
-        <li><span class="check">✓</span> Адаптивный дизайн</li>
-        <li><span class="check">✓</span> Форма обратной связи</li>
-        <li><span class="check">✓</span> Базовое SEO</li>
-        <li><span class="check">✓</span> Срок: 3-5 дней</li>
-        <li class="inactive"><span class="cross">✗</span> Личный кабинет</li>
-        <li class="inactive"><span class="cross">✗</span> CMS система</li>
-      </ul>
-      <a href="https://t.me/claower" target="_blank" class="price-btn">
-        <span>ЗАКАЗАТЬ В TELEGRAM</span>
-      </a>
-      <div class="price-glow"></div>
-    </div>
-
-    <div class="price-card hot">
-      <div class="price-hot-badge">🔥 ХИТ</div>
-      <div class="price-top">
-        <div class="price-name">БИЗНЕС</div>
-        <div class="price-icon">🚀</div>
-      </div>
-      <div class="price-amount">
-        <span class="price-from">от</span>
-        <span class="price-num">350 000</span>
-        <span class="price-currency">₸</span>
-      </div>
-      <div class="price-desc">Для серьёзного онлайн-присутствия</div>
-      <ul class="price-features">
-        <li><span class="check">✓</span> Многостраничный сайт</li>
-        <li><span class="check">✓</span> Уникальный дизайн</li>
-        <li><span class="check">✓</span> CMS / Админ-панель</li>
-        <li><span class="check">✓</span> Интеграция соц. сетей</li>
-        <li><span class="check">✓</span> SEO оптимизация</li>
-        <li><span class="check">✓</span> Срок: 7-14 дней</li>
-        <li><span class="check">✓</span> 1 мес. бесплатной поддержки</li>
-      </ul>
-      <a href="https://t.me/claower" target="_blank" class="price-btn hot-btn">
-        <span>ЗАКАЗАТЬ В TELEGRAM</span>
-        <div class="btn-shine"></div>
-      </a>
-      <div class="price-glow hot-glow"></div>
-    </div>
-
-    <div class="price-card">
-      <div class="price-top">
-        <div class="price-name">ПРЕМИУМ</div>
-        <div class="price-icon">💎</div>
-      </div>
-      <div class="price-amount">
-        <span class="price-from">от</span>
-        <span class="price-num">700 000</span>
-        <span class="price-currency">₸</span>
-      </div>
-      <div class="price-desc">Корпоративные и нестандартные решения</div>
-      <ul class="price-features">
-        <li><span class="check">✓</span> Интернет-магазин / E-commerce</li>
-        <li><span class="check">✓</span> Личный кабинет пользователя</li>
-        <li><span class="check">✓</span> Платёжные системы</li>
-        <li><span class="check">✓</span> Kaspi Pay / Kaspi QR</li>
-        <li><span class="check">✓</span> API интеграции</li>
-        <li><span class="check">✓</span> 3 мес. поддержки</li>
-        <li><span class="check">✓</span> Аналитика и отчёты</li>
-      </ul>
-      <a href="https://t.me/claower" target="_blank" class="price-btn">
-        <span>ЗАКАЗАТЬ В TELEGRAM</span>
-      </a>
-      <div class="price-glow"></div>
-    </div>
-
-    <div class="price-card app-card">
-      <div class="price-top">
-        <div class="price-name">MOBILE APP</div>
-        <div class="price-icon">📱</div>
-      </div>
-      <div class="price-amount">
-        <span class="price-from">от</span>
-        <span class="price-num">5 000 000</span>
-        <span class="price-currency">₸</span>
-      </div>
-      <div class="price-desc">iOS & Android приложения высокой сложности</div>
-      <ul class="price-features">
-        <li><span class="check">✓</span> Разработка iOS и Android</li>
-        <li><span class="check">✓</span> Регистрация в App Store / Google Play</li>
-        <li><span class="check">✓</span> Push-уведомления & PWA</li>
-        <li><span class="check">✓</span> Интеграция API и Backend</li>
-        <li><span class="check">✓</span> Авторизация & Профиль</li>
-        <li><span class="check">✓</span> Оплата (Kaspi Pay / Stripe / Visa)</li>
-        <li><span class="check">✓</span> 6 мес. гарантированной поддержки</li>
-      </ul>
-      <a href="https://t.me/claower" target="_blank" class="price-btn app-btn">
-        <span>ЗАКАЗАТЬ В TELEGRAM</span>
-      </a>
-      <div class="price-glow app-glow"></div>
-    </div>
-  </div>
-
-  <div class="pricing-note">
-    <span class="note-icon">⚠</span>
-    Точная стоимость определяется после брифинга. Цены указаны за разработку — хостинг и домен оплачиваются отдельно.
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="portfolio" id="portfolio">
-  <div class="section-header">
-    <div class="section-tag"><span class="tag-num">03</span> ПОРТФОЛИО</div>
-    <h2 class="section-title">НАШИ <span class="neon-accent">РАБОТЫ</span></h2>
-  </div>
-
-  <div class="portfolio-grid">
-    <!-- 1. Build Engineering Group & Reliable -->
-    <a href="https://reliable-buildengineering-production-96e9.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card">
-      <div class="port-img">
-        <div class="port-mockup">
-          <div class="mock-header">
-            <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
-            <span class="mock-url">reliable-buildengineering.kz</span>
-          </div>
-          <div class="mock-screen">
-            <img src="img/build.png" alt="Build Engineering Group & Reliable" loading="lazy">
-          </div>
-        </div>
-        <div class="port-hover-overlay">
-          <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
-        </div>
-      </div>
-      <div class="port-info">
-        <div class="port-header-line">
-          <div class="port-tag">СТРОИТЕЛЬСТВО & ИНЖИНИРИНГ</div>
-          <span class="port-link-icon">↗</span>
-        </div>
-        <h4>Build Engineering Group & Reliable</h4>
-        <p>Инженерно-строительный альянс. Проектирование I категории, СМР II категории и экспертиза промышленной безопасности.</p>
-      </div>
-    </a>
-
-    <!-- 2. СпецИнжГео -->
-    <a href="https://spengeo-kz-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card">
-      <div class="port-img">
-        <div class="port-mockup">
-          <div class="mock-header">
-            <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
-            <span class="mock-url">spengeo.kz</span>
-          </div>
-          <div class="mock-screen">
-            <img src="img/spengeo.png" alt="ТОО СпецИнжГео" loading="lazy">
-          </div>
-        </div>
-        <div class="port-hover-overlay">
-          <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
-        </div>
-      </div>
-      <div class="port-info">
-        <div class="port-header-line">
-          <div class="port-tag">ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</div>
-          <span class="port-link-icon">↗</span>
-        </div>
-        <h4>ТОО «СпецИнжГео»</h4>
-        <p>Инженерно-геологические, геодезические, топографические изыскания и лабораторный анализ грунтов по всему Казахстану.</p>
-      </div>
-    </a>
-
-    <!-- 3. TRAILER.KZ -->
-    <a href="https://trailer-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card">
-      <div class="port-img">
-        <div class="port-mockup">
-          <div class="mock-header">
-            <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
-            <span class="mock-url">trailer-kazakhstan.kz</span>
-          </div>
-          <div class="mock-screen">
-            <img src="img/trailer.png" alt="TRAILER.KZ" loading="lazy">
-          </div>
-        </div>
-        <div class="port-hover-overlay">
-          <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
-        </div>
-      </div>
-      <div class="port-info">
-        <div class="port-header-line">
-          <div class="port-tag">E-COMMERCE / КАТАЛОГ</div>
-          <span class="port-link-icon">↗</span>
-        </div>
-        <h4>TRAILER.KZ — Автоприцепы</h4>
-        <p>Каталог коммерческих прицепов и спецтехники. Динамические фильтры, быстрый поиск и заказ оборудования.</p>
-      </div>
-    </a>
-
-    <!-- 4. DEMETRA 2005 -->
-    <a href="https://demetra-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card">
-      <div class="port-img">
-        <div class="port-mockup">
-          <div class="mock-header">
-            <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
-            <span class="mock-url">demetra2005.kz</span>
-          </div>
-          <div class="mock-screen">
-            <img src="img/demetra.png" alt="DEMETRA 2005 Industrial" loading="lazy">
-          </div>
-        </div>
-        <div class="port-hover-overlay">
-          <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
-        </div>
-      </div>
-      <div class="port-info">
-        <div class="port-header-line">
-          <div class="port-tag">ПРОМЫШЛЕННЫЙ СЕРВИС</div>
-          <span class="port-link-icon">↗</span>
-        </div>
-        <h4>DEMETRA 2005 Industrial</h4>
-        <p>Промышленные конвейерные системы, защита активов и комплексное обслуживание предприятий с 2005 года.</p>
-      </div>
-    </a>
-
-    <!-- 5. SETI -->
-    <a href="https://seti-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card full-width-port">
-      <div class="port-img">
-        <div class="port-mockup">
-          <div class="mock-header">
-            <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span class="mock-dot green"></span>
-            <span class="mock-url">seti-network.app</span>
-          </div>
-          <div class="mock-screen">
-            <img src="img/seti.png" alt="SETI Signal Frequency Network" loading="lazy">
-          </div>
-        </div>
-        <div class="port-hover-overlay">
-          <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
-        </div>
-      </div>
-      <div class="port-info">
-        <div class="port-header-line">
-          <div class="port-tag">WEB APP / PWA / SOCNET</div>
-          <span class="port-link-icon">↗</span>
-        </div>
-        <h4>SETI — Signal Frequency Network</h4>
-        <p>Социальная сеть нового поколения. Интерактивный UI/UX, высокое качество анимаций, PWA и адаптивная платформа.</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="section-header">
-    <div class="section-tag"><span class="tag-num">04</span> ПРОЦЕСС</div>
-    <h2 class="section-title">КАК МЫ <span class="neon-accent">РАБОТАЕМ</span></h2>
-  </div>
-
-  <div class="process-timeline">
-    <div class="process-step">
-      <div class="step-num">01</div>
-      <div class="step-content">
-        <h3>Брифинг</h3>
-        <p>Обсуждаем ваш проект, цели и пожелания. Заполняете бриф — получаете точную смету.</p>
-        <div class="step-time">1-2 дня</div>
-      </div>
-      <div class="step-connector"></div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">02</div>
-      <div class="step-content">
-        <h3>Дизайн</h3>
-        <p>Разрабатываем уникальный дизайн в Figma. Показываем макеты, вносим правки.</p>
-        <div class="step-time">3-5 дней</div>
-      </div>
-      <div class="step-connector"></div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">03</div>
-      <div class="step-content">
-        <h3>Разработка</h3>
-        <p>Верстаем и программируем сайт. Подключаем всё необходимое и тестируем.</p>
-        <div class="step-time">5-14 дней</div>
-      </div>
-      <div class="step-connector"></div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">04</div>
-      <div class="step-content">
-        <h3>Запуск</h3>
-        <p>Размещаем сайт на хостинге, настраиваем домен и передаём вам все доступы.</p>
-        <div class="step-time">1 день</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-bg">
-    <div class="contact-grid"></div>
-  </div>
-
-  <div class="section-header">
-    <div class="section-tag"><span class="tag-num">05</span> КОНТАКТ</div>
-    <h2 class="section-title">НАЧНЁМ <span class="neon-accent">ПРОЕКТ?</span></h2>
-    <p class="section-desc">Напишите нам — ответим в течение часа и обсудим детали</p>
-  </div>
-
-  <div class="contact-wrap">
-    <div class="contact-links">
-      <a href="https://t.me/claower" target="_blank" class="contact-card tg">
-        <div class="cc-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 20 L28 12 L22 28 L18 23 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-            <line x1="18" y1="23" x2="22" y2="28" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="cc-info">
-          <div class="cc-label">Telegram</div>
-          <div class="cc-value">@claower</div>
-        </div>
-        <div class="cc-arrow">→</div>
-        <div class="cc-glow"></div>
-      </a>
-
-      <a href="https://wa.me/77000937002" target="_blank" class="contact-card wa">
-        <div class="cc-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M12 28 L13.5 23 C11.5 20.5 11.5 16 14.5 13 C17.5 10 22.5 10 25.5 13 C28.5 16 28.5 21 25.5 24 C22.5 27 17.5 27 15 25.5 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-            <path d="M17 17 C17 17 18 19 20 20 C22 21 24 21 24 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="cc-info">
-          <div class="cc-label">WhatsApp</div>
-          <div class="cc-value">8 700 093 7002</div>
-        </div>
-        <div class="cc-arrow">→</div>
-        <div class="cc-glow"></div>
-      </a>
-
-      <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="contact-card ig">
-        <div class="cc-icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <rect x="8" y="8" width="24" height="24" rx="7" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="28" cy="12" r="2" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="cc-info">
-          <div class="cc-label">Instagram</div>
-          <div class="cc-value">Direct сообщение</div>
-        </div>
-        <div class="cc-arrow">→</div>
-        <div class="cc-glow"></div>
-      </a>
-    </div>
-
-    <div class="contact-form-wrap">
-      <form class="contact-form" id="contactForm">
-        <div class="form-field">
-          <label>ИМЯ</label>
-          <input type="text" placeholder="Ваше имя" required>
-        </div>
-        <div class="form-field">
-          <label>КОНТАКТ</label>
-          <input type="text" placeholder="Telegram / WhatsApp / Instagram" required>
-        </div>
-        <div class="form-field">
-          <label>ВАШ ПРОЕКТ</label>
-          <select>
-            <option value="">Выберите тип проекта</option>
-            <option>Лендинг страница — от 150 000₸</option>
-            <option>Корпоративный сайт — от 350 000₸</option>
-            <option>Интернет-магазин — от 700 000₸</option>
-            <option>Мобильное приложение — от 5 000 000₸</option>
-            <option>Другое</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label>ОПИСАНИЕ</label>
-          <textarea placeholder="Расскажите о вашем проекте..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">
-          <span>ОТПРАВИТЬ ЗАЯВКУ</span>
-          <span class="submit-arrow">⟶</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-top">
-    <div class="footer-logo">
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
       <span class="logo-bracket">[</span>
       <span class="logo-text">CODIX</span>
       <span class="logo-accent">_</span>
       <span class="logo-sub">STYLE LINE</span>
       <span class="logo-bracket">]</span>
     </div>
-    <div class="footer-tagline">Разрабатываем сайты из будущего</div>
+    <ul class="nav-links">
+      <li><a href="#services" data-text="УСЛУГИ">УСЛУГИ</a></li>
+      <li><a href="#pricing" data-text="ЦЕНЫ">ЦЕНЫ</a></li>
+      <li><a href="#portfolio" data-text="ПОРТФОЛИО">ПОРТФОЛИО</a></li>
+      <li><a href="#contact" data-text="КОНТАКТ">КОНТАКТ</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">НАЧАТЬ ПРОЕКТ</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+    <div class="mobile-menu-drawer">
+      <div class="mobile-menu-header">
+        <div class="nav-logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">CODIX</span>
+          <span class="logo-accent">_</span>
+          <span class="logo-sub">LINE</span>
+          <span class="logo-bracket">]</span>
+        </div>
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <div class="mobile-menu-body">
+        <ul class="mobile-nav-links">
+          <li><a href="#services" class="mobile-nav-item"><span class="nav-num">01</span> УСЛУГИ</a></li>
+          <li><a href="#pricing" class="mobile-nav-item"><span class="nav-num">02</span> ЦЕНЫ</a></li>
+          <li><a href="#portfolio" class="mobile-nav-item"><span class="nav-num">03</span> ПОРТФОЛИО</a></li>
+          <li><a href="#process" class="mobile-nav-item"><span class="nav-num">04</span> ПРОЦЕСС</a></li>
+          <li><a href="#contact" class="mobile-nav-item"><span class="nav-num">05</span> КОНТАКТЫ</a></li>
+        </ul>
+
+        <div class="mobile-menu-footer">
+          <a href="#contact" class="btn-primary mobile-cta-btn">
+            <span class="btn-glow"></span>
+            <span>ОБСУДИТЬ ПРОЕКТ</span>
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <div class="mobile-social-grid">
+            <a href="https://t.me/claower" target="_blank" class="mob-social-btn tg">
+              <span>Telegram</span>
+            </a>
+            <a href="https://wa.me/77000937002" target="_blank" class="mob-social-btn wa">
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="mob-social-btn ig">
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="footer-mid">
-    <div class="footer-col">
-      <h4>УСЛУГИ</h4>
-      <ul>
-        <li>Лендинг страницы</li>
-        <li>Корпоративные сайты</li>
-        <li>Интернет-магазины</li>
-        <li>UI/UX Дизайн</li>
-      </ul>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="city-glow"></div>
     </div>
-    <div class="footer-col">
-      <h4>КОНТАКТЫ</h4>
-      <ul>
-        <li><a href="https://t.me/claower" target="_blank">Telegram: @claower</a></li>
-        <li><a href="https://wa.me/77000937002" target="_blank">WhatsApp: 87000937002</a></li>
-        <li><a href="https://www.instagram.com/direct/inbox/" target="_blank">Instagram DM</a></li>
-      </ul>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span>WEB DEVELOPMENT STUDIO</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line">
+          <span class="glitch" data-text="СОЗДАЁМ">СОЗДАЁМ</span>
+        </span>
+        <span class="title-line">
+          <span class="neon-word">САЙТЫ</span>
+          <span class="title-accent"> ИЗ</span>
+        </span>
+        <span class="title-line">
+          <span class="outline-text">БУДУЩЕГО</span>
+        </span>
+      </h1>
+
+      <p class="hero-desc">
+        Разрабатываем сайты, которые не просто работают — они <span class="accent">захватывают</span>.
+        Современный дизайн, чистый код, результат который продаёт.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <span class="btn-glow"></span>
+          <span>ОБСУДИТЬ ПРОЕКТ</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#portfolio" class="btn-ghost">
+          <span>СМОТРЕТЬ РАБОТЫ</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Проектов</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Довольных клиентов</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-plus">г</span>
+          <span class="stat-label">Опыта</span>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>ЛОКАЦИЯ</h4>
-      <ul>
-        <li>Казахстан</li>
-        <li>Работаем по всему миру 🌍</li>
-      </ul>
+
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="window-title">codix_main.js</span>
+        </div>
+        <div class="code-content" id="codeContent">
+          <div class="code-line"><span class="kw">const</span> <span class="var">site</span> = <span
+              class="fn">createMasterpiece</span>({</div>
+          <div class="code-line indent"><span class="prop">design</span>: <span class="str">"cyberpunk"</span>,</div>
+          <div class="code-line indent"><span class="prop">performance</span>: <span class="num">100</span>,</div>
+          <div class="code-line indent"><span class="prop">style</span>: <span class="str">"нeon_tokyo"</span>,</div>
+          <div class="code-line indent"><span class="prop">impact</span>: <span class="str">"максимальный"</span>,</div>
+          <div class="code-line">});</div>
+          <div class="code-line empty"></div>
+          <div class="code-line"><span class="kw">await</span> site.<span class="fn">launch</span>();</div>
+          <div class="code-line comment">// ✓ Ваш бизнес взлетел 🚀</div>
+        </div>
+      </div>
+
+      <div class="floating-tags">
+        <div class="ftag ftag-1">React.js</div>
+        <div class="ftag ftag-2">Next.js</div>
+        <div class="ftag ftag-3">UI/UX</div>
+        <div class="ftag ftag-4">SEO</div>
+        <div class="ftag ftag-5">TypeScript</div>
+      </div>
     </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <div class="section-tag"><span class="tag-num">01</span> УСЛУГИ</div>
+      <h2 class="section-title">ЧТО МЫ <span class="neon-accent">ДЕЛАЕМ</span></h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-delay="0">
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <rect x="5" y="10" width="50" height="35" rx="3" stroke="currentColor" stroke-width="2" />
+            <line x1="5" y1="20" x2="55" y2="20" stroke="currentColor" stroke-width="2" />
+            <circle cx="12" cy="15" r="2" fill="currentColor" />
+            <circle cx="20" cy="15" r="2" fill="currentColor" />
+            <line x1="15" y1="30" x2="45" y2="30" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" />
+            <line x1="15" y1="37" x2="35" y2="37" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" />
+            <rect x="20" y="45" width="20" height="5" fill="currentColor" opacity="0.5" />
+          </svg>
+        </div>
+        <h3>Лендинг страницы</h3>
+        <p>Конверсионные одностраничники, которые превращают посетителей в клиентов. Продающий дизайн + мощный
+          копирайтинг.</p>
+        <div class="card-tech">
+          <span>HTML/CSS</span><span>JS</span><span>Анимации</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card featured" data-delay="100">
+        <div class="card-badge">ПОПУЛЯРНОЕ</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <rect x="5" y="5" width="22" height="50" rx="2" stroke="currentColor" stroke-width="2" />
+            <rect x="33" y="5" width="22" height="23" rx="2" stroke="currentColor" stroke-width="2" />
+            <rect x="33" y="32" width="22" height="23" rx="2" stroke="currentColor" stroke-width="2" />
+            <line x1="10" y1="15" x2="22" y2="15" stroke="currentColor" stroke-width="1.5" />
+            <line x1="10" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.5" />
+            <line x1="10" y1="27" x2="18" y2="27" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="44" cy="43" r="6" stroke="currentColor" stroke-width="2" />
+            <line x1="48" y1="47" x2="52" y2="51" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <h3>Корпоративные сайты</h3>
+        <p>Многостраничные сайты для бизнеса. Полноценное представление компании с каталогом, блогом и CRM интеграцией.
+        </p>
+        <div class="card-tech">
+          <span>React</span><span>Next.js</span><span>CMS</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="200">
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <rect x="15" y="5" width="30" height="50" rx="4" stroke="currentColor" stroke-width="2" />
+            <line x1="15" y1="45" x2="45" y2="45" stroke="currentColor" stroke-width="2" />
+            <circle cx="30" cy="50" r="2" fill="currentColor" />
+            <rect x="20" y="12" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
+            <line x1="20" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="1.5" />
+            <line x1="20" y1="36" x2="33" y2="36" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </div>
+        <h3>Мобильные версии</h3>
+        <p>Адаптивная верстка и прогрессивные веб-приложения. Ваш сайт будет отлично выглядеть на любом экране.</p>
+        <div class="card-tech">
+          <span>PWA</span><span>Responsive</span><span>Mobile-first</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="300">
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2" />
+            <path d="M30 10 C20 20 20 40 30 50 C40 40 40 20 30 10Z" stroke="currentColor" stroke-width="1.5" />
+            <line x1="10" y1="30" x2="50" y2="30" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="30" cy="30" r="3" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Интернет-магазины</h3>
+        <p>E-commerce платформы с корзиной, оплатой и личным кабинетом. Продавайте онлайн уже сегодня.</p>
+        <div class="card-tech">
+          <span>E-commerce</span><span>Kaspi</span><span>API</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="400">
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <path d="M10 20 L30 10 L50 20 L50 45 L30 55 L10 45 Z" stroke="currentColor" stroke-width="2" />
+            <path d="M10 20 L30 30 L50 20" stroke="currentColor" stroke-width="1.5" />
+            <line x1="30" y1="30" x2="30" y2="55" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </div>
+        <h3>UI/UX Дизайн</h3>
+        <p>Прототипы и дизайн-системы в Figma. Создаём интерфейсы, которые интуитивно понятны и визуально впечатляют.
+        </p>
+        <div class="card-tech">
+          <span>Figma</span><span>Prototype</span><span>Design System</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+
+      <div class="service-card" data-delay="500">
+        <div class="card-icon">
+          <svg viewBox="0 0 60 60" fill="none">
+            <path d="M15 15 L45 15 L45 35 L35 35 L30 45 L25 35 L15 35 Z" stroke="currentColor" stroke-width="2" />
+            <line x1="22" y1="23" x2="38" y2="23" stroke="currentColor" stroke-width="1.5" />
+            <line x1="22" y1="29" x2="34" y2="29" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </div>
+        <h3>SEO & Поддержка</h3>
+        <p>Поисковая оптимизация и техническая поддержка сайта. Чтобы ваш сайт находили и он всегда работал.</p>
+        <div class="card-tech">
+          <span>SEO</span><span>Аналитика</span><span>Поддержка</span>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-header">
+      <div class="section-tag"><span class="tag-num">02</span> ЦЕНЫ</div>
+      <h2 class="section-title">ТАРИФЫ <span class="neon-accent">И ПАКЕТЫ</span></h2>
+      <p class="section-desc">Прозрачное ценообразование. Никаких скрытых платежей.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-top">
+          <div class="price-name">СТАРТ</div>
+          <div class="price-icon">⚡</div>
+        </div>
+        <div class="price-amount">
+          <span class="price-from">от</span>
+          <span class="price-num">150 000</span>
+          <span class="price-currency">₸</span>
+        </div>
+        <div class="price-desc">Для малого бизнеса и стартапов</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Лендинг страница (1-5 блоков)</li>
+          <li><span class="check">✓</span> Адаптивный дизайн</li>
+          <li><span class="check">✓</span> Форма обратной связи</li>
+          <li><span class="check">✓</span> Базовое SEO</li>
+          <li><span class="check">✓</span> Срок: 3-5 дней</li>
+          <li class="inactive"><span class="cross">✗</span> Личный кабинет</li>
+          <li class="inactive"><span class="cross">✗</span> CMS система</li>
+        </ul>
+        <a href="https://t.me/claower" target="_blank" class="price-btn">
+          <span>ЗАКАЗАТЬ В TELEGRAM</span>
+        </a>
+        <div class="price-glow"></div>
+      </div>
+
+      <div class="price-card hot">
+        <div class="price-hot-badge">🔥 ХИТ</div>
+        <div class="price-top">
+          <div class="price-name">БИЗНЕС</div>
+          <div class="price-icon">🚀</div>
+        </div>
+        <div class="price-amount">
+          <span class="price-from">от</span>
+          <span class="price-num">350 000</span>
+          <span class="price-currency">₸</span>
+        </div>
+        <div class="price-desc">Для серьёзного онлайн-присутствия</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Многостраничный сайт</li>
+          <li><span class="check">✓</span> Уникальный дизайн</li>
+          <li><span class="check">✓</span> CMS / Админ-панель</li>
+          <li><span class="check">✓</span> Интеграция соц. сетей</li>
+          <li><span class="check">✓</span> SEO оптимизация</li>
+          <li><span class="check">✓</span> Срок: 7-14 дней</li>
+          <li><span class="check">✓</span> 1 мес. бесплатной поддержки</li>
+        </ul>
+        <a href="https://t.me/claower" target="_blank" class="price-btn hot-btn">
+          <span>ЗАКАЗАТЬ В TELEGRAM</span>
+          <div class="btn-shine"></div>
+        </a>
+        <div class="price-glow hot-glow"></div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-top">
+          <div class="price-name">ПРЕМИУМ</div>
+          <div class="price-icon">💎</div>
+        </div>
+        <div class="price-amount">
+          <span class="price-from">от</span>
+          <span class="price-num">700 000</span>
+          <span class="price-currency">₸</span>
+        </div>
+        <div class="price-desc">Корпоративные и нестандартные решения</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Интернет-магазин / E-commerce</li>
+          <li><span class="check">✓</span> Личный кабинет пользователя</li>
+          <li><span class="check">✓</span> Платёжные системы</li>
+          <li><span class="check">✓</span> Kaspi Pay / Kaspi QR</li>
+          <li><span class="check">✓</span> API интеграции</li>
+          <li><span class="check">✓</span> 3 мес. поддержки</li>
+          <li><span class="check">✓</span> Аналитика и отчёты</li>
+        </ul>
+        <a href="https://t.me/claower" target="_blank" class="price-btn">
+          <span>ЗАКАЗАТЬ В TELEGRAM</span>
+        </a>
+        <div class="price-glow"></div>
+      </div>
+
+      <div class="price-card app-card">
+        <div class="price-top">
+          <div class="price-name">MOBILE APP</div>
+          <div class="price-icon">📱</div>
+        </div>
+        <div class="price-amount">
+          <span class="price-from">от</span>
+          <span class="price-num">5 000 000</span>
+          <span class="price-currency">₸</span>
+        </div>
+        <div class="price-desc">iOS & Android приложения высокой сложности</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> Разработка iOS и Android</li>
+          <li><span class="check">✓</span> Регистрация в App Store / Google Play</li>
+          <li><span class="check">✓</span> Push-уведомления & PWA</li>
+          <li><span class="check">✓</span> Интеграция API и Backend</li>
+          <li><span class="check">✓</span> Авторизация & Профиль</li>
+          <li><span class="check">✓</span> Оплата (Kaspi Pay / Stripe / Visa)</li>
+          <li><span class="check">✓</span> 6 мес. гарантированной поддержки</li>
+        </ul>
+        <a href="https://t.me/claower" target="_blank" class="price-btn app-btn">
+          <span>ЗАКАЗАТЬ В TELEGRAM</span>
+        </a>
+        <div class="price-glow app-glow"></div>
+      </div>
+    </div>
+
+    <div class="pricing-note">
+      <span class="note-icon">⚠</span>
+      Точная стоимость определяется после брифинга. Цены указаны за разработку — хостинг и домен оплачиваются отдельно.
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-header">
+      <div class="section-tag"><span class="tag-num">03</span> ПОРТФОЛИО</div>
+      <h2 class="section-title">НАШИ <span class="neon-accent">РАБОТЫ</span></h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- 1. Build Engineering Group & Reliable -->
+      <a href="https://reliable-buildengineering-production-96e9.up.railway.app/" target="_blank"
+        rel="noopener noreferrer" class="port-card">
+        <div class="port-img">
+          <div class="port-mockup">
+            <div class="mock-header">
+              <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                class="mock-dot green"></span>
+              <span class="mock-url">reliable-buildengineering.kz</span>
+            </div>
+            <div class="mock-screen">
+              <img src="img/build.png" alt="Build Engineering Group & Reliable" loading="lazy">
+            </div>
+          </div>
+          <div class="port-hover-overlay">
+            <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <div class="port-header-line">
+            <div class="port-tag">СТРОИТЕЛЬСТВО & ИНЖИНИРИНГ</div>
+            <span class="port-link-icon">↗</span>
+          </div>
+          <h4>Build Engineering Group & Reliable</h4>
+          <p>Инженерно-строительный альянс. Проектирование I категории, СМР II категории и экспертиза промышленной
+            безопасности.</p>
+        </div>
+      </a>
+
+      <!-- 2. СпецИнжГео -->
+      <a href="https://spengeo-kz-production.up.railway.app/" target="_blank" rel="noopener noreferrer"
+        class="port-card">
+        <div class="port-img">
+          <div class="port-mockup">
+            <div class="mock-header">
+              <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                class="mock-dot green"></span>
+              <span class="mock-url">spengeo.kz</span>
+            </div>
+            <div class="mock-screen">
+              <img src="img/spengeo.png" alt="ТОО СпецИнжГео" loading="lazy">
+            </div>
+          </div>
+          <div class="port-hover-overlay">
+            <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <div class="port-header-line">
+            <div class="port-tag">ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</div>
+            <span class="port-link-icon">↗</span>
+          </div>
+          <h4>ТОО «СпецИнжГео»</h4>
+          <p>Инженерно-геологические, геодезические, топографические изыскания и лабораторный анализ грунтов по всему
+            Казахстану.</p>
+        </div>
+      </a>
+
+      <!-- 3. TRAILER.KZ -->
+      <a href="https://trailer-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="port-card">
+        <div class="port-img">
+          <div class="port-mockup">
+            <div class="mock-header">
+              <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                class="mock-dot green"></span>
+              <span class="mock-url">trailer-kazakhstan.kz</span>
+            </div>
+            <div class="mock-screen">
+              <img src="img/trailer.png" alt="TRAILER.KZ" loading="lazy">
+            </div>
+          </div>
+          <div class="port-hover-overlay">
+            <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <div class="port-header-line">
+            <div class="port-tag">E-COMMERCE / КАТАЛОГ</div>
+            <span class="port-link-icon">↗</span>
+          </div>
+          <h4>TRAILER.KZ — Автоприцепы</h4>
+          <p>Каталог коммерческих прицепов и спецтехники. Динамические фильтры, быстрый поиск и заказ оборудования.</p>
+        </div>
+      </a>
+
+      <!-- 4. HUB MASTER -->
+      <a href="https://www.hub-master.kz/" target="_blank" rel="noopener noreferrer" class="port-card">
+        <div class="port-img">
+          <div class="port-mockup">
+            <div class="mock-header">
+              <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                class="mock-dot green"></span>
+              <span class="mock-url">hub-master.kz</span>
+            </div>
+            <div class="mock-screen">
+              <img src="img/hubmaster.png" alt="HUB MASTER — Автоматизация OLX" loading="lazy">
+            </div>
+          </div>
+          <div class="port-hover-overlay">
+            <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <div class="port-header-line">
+            <div class="port-tag">B2B ПЛАТФОРМА / АВТОМАТИЗАЦИЯ</div>
+            <span class="port-link-icon">↗</span>
+          </div>
+          <h4>HUB MASTER — Автоматизация OLX</h4>
+          <p>Платформа автоматизации бизнеса и кабинета OLX Kazakhstan: аналитика, автоподнятия объявлений, автоответы и CRM.</p>
+        </div>
+      </a>
+
+      <!-- 5. SETI -->
+      <a href="https://seti-production.up.railway.app/" target="_blank" rel="noopener noreferrer"
+        class="port-card full-width-port">
+        <div class="port-img">
+          <div class="port-mockup">
+            <div class="mock-header">
+              <span class="mock-dot red"></span><span class="mock-dot yellow"></span><span
+                class="mock-dot green"></span>
+              <span class="mock-url">seti-network.app</span>
+            </div>
+            <div class="mock-screen">
+              <img src="img/seti.png" alt="SETI Signal Frequency Network" loading="lazy">
+            </div>
+          </div>
+          <div class="port-hover-overlay">
+            <span>ОТКРЫТЬ ПРОЕКТ ↗</span>
+          </div>
+        </div>
+        <div class="port-info">
+          <div class="port-header-line">
+            <div class="port-tag">WEB APP / PWA / SOCNET</div>
+            <span class="port-link-icon">↗</span>
+          </div>
+          <h4>SETI — Signal Frequency Network</h4>
+          <p>Социальная сеть нового поколения. Интерактивный UI/UX, высокое качество анимаций, PWA и адаптивная
+            платформа.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-header">
+      <div class="section-tag"><span class="tag-num">04</span> ПРОЦЕСС</div>
+      <h2 class="section-title">КАК МЫ <span class="neon-accent">РАБОТАЕМ</span></h2>
+    </div>
+
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Брифинг</h3>
+          <p>Обсуждаем ваш проект, цели и пожелания. Заполняете бриф — получаете точную смету.</p>
+          <div class="step-time">1-2 дня</div>
+        </div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Дизайн</h3>
+          <p>Разрабатываем уникальный дизайн в Figma. Показываем макеты, вносим правки.</p>
+          <div class="step-time">3-5 дней</div>
+        </div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Разработка</h3>
+          <p>Верстаем и программируем сайт. Подключаем всё необходимое и тестируем.</p>
+          <div class="step-time">5-14 дней</div>
+        </div>
+        <div class="step-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Запуск</h3>
+          <p>Размещаем сайт на хостинге, настраиваем домен и передаём вам все доступы.</p>
+          <div class="step-time">1 день</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-bg">
+      <div class="contact-grid"></div>
+    </div>
+
+    <div class="section-header">
+      <div class="section-tag"><span class="tag-num">05</span> КОНТАКТ</div>
+      <h2 class="section-title">НАЧНЁМ <span class="neon-accent">ПРОЕКТ?</span></h2>
+      <p class="section-desc">Напишите нам — ответим в течение часа и обсудим детали</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-links">
+        <a href="https://t.me/claower" target="_blank" class="contact-card tg">
+          <div class="cc-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 20 L28 12 L22 28 L18 23 Z" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <line x1="18" y1="23" x2="22" y2="28" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="cc-info">
+            <div class="cc-label">Telegram</div>
+            <div class="cc-value">@claower</div>
+          </div>
+          <div class="cc-arrow">→</div>
+          <div class="cc-glow"></div>
+        </a>
+
+        <a href="https://wa.me/77000937002" target="_blank" class="contact-card wa">
+          <div class="cc-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" />
+              <path
+                d="M12 28 L13.5 23 C11.5 20.5 11.5 16 14.5 13 C17.5 10 22.5 10 25.5 13 C28.5 16 28.5 21 25.5 24 C22.5 27 17.5 27 15 25.5 Z"
+                stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path d="M17 17 C17 17 18 19 20 20 C22 21 24 21 24 21" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="cc-info">
+            <div class="cc-label">WhatsApp</div>
+            <div class="cc-value">8 700 093 7002</div>
+          </div>
+          <div class="cc-arrow">→</div>
+          <div class="cc-glow"></div>
+        </a>
+
+        <a href="https://www.instagram.com/direct/inbox/" target="_blank" class="contact-card ig">
+          <div class="cc-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="8" y="8" width="24" height="24" rx="7" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="28" cy="12" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="cc-info">
+            <div class="cc-label">Instagram</div>
+            <div class="cc-value">Direct сообщение</div>
+          </div>
+          <div class="cc-arrow">→</div>
+          <div class="cc-glow"></div>
+        </a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm">
+          <div class="form-field">
+            <label>ИМЯ</label>
+            <input type="text" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-field">
+            <label>КОНТАКТ</label>
+            <input type="text" placeholder="Telegram / WhatsApp / Instagram" required>
+          </div>
+          <div class="form-field">
+            <label>ВАШ ПРОЕКТ</label>
+            <select>
+              <option value="">Выберите тип проекта</option>
+              <option>Лендинг страница — от 150 000₸</option>
+              <option>Корпоративный сайт — от 350 000₸</option>
+              <option>Интернет-магазин — от 700 000₸</option>
+              <option>Мобильное приложение — от 5 000 000₸</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>ОПИСАНИЕ</label>
+            <textarea placeholder="Расскажите о вашем проекте..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <span>ОТПРАВИТЬ ЗАЯВКУ</span>
+            <span class="submit-arrow">⟶</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">CODIX</span>
+        <span class="logo-accent">_</span>
+        <span class="logo-sub">STYLE LINE</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <div class="footer-tagline">Разрабатываем сайты из будущего</div>
+    </div>
+
+    <div class="footer-mid">
+      <div class="footer-col">
+        <h4>УСЛУГИ</h4>
+        <ul>
+          <li>Лендинг страницы</li>
+          <li>Корпоративные сайты</li>
+          <li>Интернет-магазины</li>
+          <li>UI/UX Дизайн</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>КОНТАКТЫ</h4>
+        <ul>
+          <li><a href="https://t.me/claower" target="_blank">Telegram: @claower</a></li>
+          <li><a href="https://wa.me/77000937002" target="_blank">WhatsApp: 87000937002</a></li>
+          <li><a href="https://www.instagram.com/direct/inbox/" target="_blank">Instagram DM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ЛОКАЦИЯ</h4>
+        <ul>
+          <li>Казахстан</li>
+          <li>Работаем по всему миру 🌍</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 CODIX STYLE LINE. All rights reserved.</div>
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span>Онлайн — готовы к работе</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM DOCK -->
+  <div class="mobile-bottom-dock">
+    <a href="https://t.me/claower" target="_blank" class="dock-btn tg" aria-label="Telegram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+      </svg>
+      <span>Telegram</span>
+    </a>
+    <a href="#contact" class="dock-btn cta">
+      <span>ОБСУДИТЬ ПРОЕКТ</span>
+    </a>
+    <a href="https://wa.me/77000937002" target="_blank" class="dock-btn wa" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
   </div>
 
-  <div class="footer-bottom">
-    <div class="footer-copy">© 2024 CODIX STYLE LINE. All rights reserved.</div>
-    <div class="footer-status">
-      <span class="status-dot"></span>
-      <span>Онлайн — готовы к работе</span>
-    </div>
-  </div>
-</footer>
-
-<!-- MOBILE BOTTOM DOCK -->
-<div class="mobile-bottom-dock">
-  <a href="https://t.me/claower" target="_blank" class="dock-btn tg" aria-label="Telegram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-    <span>Telegram</span>
-  </a>
-  <a href="#contact" class="dock-btn cta">
-    <span>ОБСУДИТЬ ПРОЕКТ</span>
-  </a>
-  <a href="https://wa.me/77000937002" target="_blank" class="dock-btn wa" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-    <span>WhatsApp</span>
-  </a>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
