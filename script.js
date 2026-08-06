@@ -246,7 +246,7 @@ cycleNeon();
 
 // ---- CONSOLE EASTER EGG ----
 console.log(
-  '%c[CODIX STYLE LINE]%c\nРазрабатываем сайты из будущего 🚀\nTelegram: @claower\nWhatsApp: 87000937002',
+  '%c[CODIX STYLE LINE]%c\nРазрабатываем сайты из будущего 🚀\nTelegram: @claower\nWhatsApp: +7 (700) 093-70-02',
   'color: #00f5ff; font-family: monospace; font-size: 18px; font-weight: bold; text-shadow: 0 0 10px #00f5ff;',
   'color: #888; font-family: monospace; font-size: 12px;'
 );
